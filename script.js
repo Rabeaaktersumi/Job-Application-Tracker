@@ -26,6 +26,7 @@ function calculateCount() {
     total.innerText = cardSection.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
+    availableJobs.innerText = cardSection.children.length;
 }
 calculateCount();
 
@@ -47,10 +48,9 @@ function toggleEmptyState() {
         availableHeader.classList.remove('hidden');
     } else {
         emptyState.classList.add('hidden');
-        availableHeader.classList.add('hidden');
     }
 
-   
+    availableJobs.innerText = `${count} job${count !== 1 ? 's' : ''}`;
 }
 toggleEmptyState();
 
@@ -97,7 +97,7 @@ mainContainer.addEventListener('click', function (event) {
 
     //INTERVIEW BUTTON CLICK
     if (event.target.classList.contains('interBtn')) {
-        const parentNode = event.target.parentNode.parentNode.parentNode;
+        const parentNode = event.target.closest('.card');
 
         const companyName = parentNode.querySelector('.companyName').innerText;
         const position = parentNode.querySelector('.position').innerText;
@@ -161,7 +161,7 @@ mainContainer.addEventListener('click', function (event) {
             rejectedList.push(cardInfo);
         }
 
-         // Remove from interview list
+        // Remove from interview list
         interviewList = interviewList.filter(item => item.companyName != cardInfo.companyName);
 
         if (currentStatus == 'interview-filter-btn') {
