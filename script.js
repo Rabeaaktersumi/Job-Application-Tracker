@@ -34,7 +34,6 @@ function toggleEmptyState() {
     let count = 0;
     if (currentStatus === 'all-filter-btn') {
         count = cardSection.children.length;
-
     }
     else if (currentStatus === 'interview-filter-btn') {
         count = interviewList.length;
@@ -45,11 +44,9 @@ function toggleEmptyState() {
 
     if (count === 0) {
         emptyState.classList.remove('hidden');
-        availableHeader.classList.remove('hidden');
     } else {
         emptyState.classList.add('hidden');
     }
-
     availableJobs.innerText = `${count} job${count !== 1 ? 's' : ''}`;
 }
 toggleEmptyState();
