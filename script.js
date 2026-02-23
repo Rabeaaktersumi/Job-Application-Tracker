@@ -1,6 +1,6 @@
 let interviewList = [];
 let rejectedList = [];
-let currentStatus = 'all';
+let currentStatus = 'all-filter-btn';
 
 
 //DOM ELEMENTS
@@ -127,7 +127,9 @@ mainContainer.addEventListener('click', function (event) {
         }
 
         calculateCount();
-        renderInterview();
+        if (currentStatus == 'interview-filter-btn') {
+            renderInterview();
+        }
         toggleEmptyState();
     }
 
@@ -166,8 +168,11 @@ mainContainer.addEventListener('click', function (event) {
         }
 
         calculateCount();
-        renderReject();
+        if (currentStatus === 'rejected-filter-btn') {
+            renderReject();
+        }
         toggleEmptyState();
+
 
     }
     else if (event.target.classList.contains('deleteBtn')) {
