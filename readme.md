@@ -53,7 +53,8 @@ We can stop event bubbling using by event.stopPRopagation() method.
 
 => Event Delegation is a technique where we use one event listener for different child element instead of different event listener in their common parent element. It works depend on event bibbling.
 
--It's useful because it's performance is very good need less memory and don't need different event listener.
+It's useful because:
+-It's performance is very good need less memory and don't need different event listener.
 -Supports dynamic elements.
 -It's make code clean and maintainable.
 
