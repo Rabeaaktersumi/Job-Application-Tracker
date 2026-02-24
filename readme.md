@@ -29,13 +29,13 @@ git clone https://github.com/Rabeaaktersumi/Job-Application-Tracker.git
 2. How do you create and insert a new element into the DOM?
 
 =>
-<!--in HTML
+<!--in HTML-->
 <div id = "heading-section">
     <h1>This is Bangladesh </h1>
-</div>-->
+</div>
 <script>
     const newHeading = document.createElement('h1');
-    newHeading.innerText = 'Welcome to the Bangladesh';
+    newHeading.textContent = 'Welcome to the Bangladesh';
     Const headingSection = document.getelementById('heading-section');
     headingSection.appendchild(newHeading);
 </script>
