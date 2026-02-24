@@ -30,14 +30,14 @@ git clone https://github.com/Rabeaaktersumi/Job-Application-Tracker.git
 
 =>
 <!--in HTML-->
-<div id = "heading-section">
-    <h1>This is Bangladesh </h1>
+<div id = "head-section">
+    <p>This is Bangladesh <p>
 </div>
 <script>
-    const newHeading = document.createElement('h1');
-    newHeading.textContent = 'Welcome to the Bangladesh';
-    Const headingSection = document.getelementById('heading-section');
-    headingSection.appendchild(newHeading);
+    const newText = document.createElement('p');
+    newText.textContent = 'Welcome to the Bangladesh';
+    Const headSection = document.getElementById('head-section');
+    headSection.appendchild(newText);
 </script>
 
 
