@@ -20,7 +20,7 @@ git clone https://github.com/Rabeaaktersumi/Job-Application-Tracker.git
 
 ## Answers to the Questions
 
-1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+##1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 =>getElementById()- its select an element using by its unique name (id attribute), returns object or null.
 Example: document.getElementById('id');
@@ -31,7 +31,7 @@ Example: document.getElementByClassName('classname');
 =>quirySelector()- its a flexible methode that returns the first element which is match one or more css selectors.
 Example: document.querySelector('.example');
 
-2. How do you create and insert a new element into the DOM?
+##2. How do you create and insert a new element into the DOM?
 
 =>
 <!--in HTML
@@ -47,7 +47,7 @@ Example: document.querySelector('.example');
 
 
 
-3. What is Event Bubbling? And how does it work?
+##3. What is Event Bubbling? And how does it work?
 
 => Event Bubbling is a DOM Event propagation where occurred an event in child element that event goes upwards their parent element step by step, its follow DOM tree.
 
@@ -68,7 +68,7 @@ document.querySelector('.child').addEventListener('click', function() => {
 });
 
 
-4. What is Event Delegation in JavaScript? Why is it useful?
+##4. What is Event Delegation in JavaScript? Why is it useful?
 
 => Event Delegation is a technique where we use one event listener for different child element instead of different event listener in their common parent element. It works depend on event bibbling.
 
@@ -78,7 +78,7 @@ It's useful because-
 -It's make code clean and maintainable.
 
 
-5. What is the difference between preventDefault() and stopPropagation() methods?
+##5. What is the difference between preventDefault() and stopPropagation() methods?
 
 => preventDefault() methods:
 -It works to stop default behaviour in an element.
