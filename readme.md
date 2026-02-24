@@ -23,20 +23,25 @@ git clone https://github.com/Rabeaaktersumi/Job-Application-Tracker.git
 1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 =>getElementById()- its select an element using by its unique name (id attribute), returns object or null.
+Example: document.getElementById('id');
+
 =>getElementByClassName()- its select an element using by its common names (class attribute), returns a live HTMLCollection.
+Example: document.getElementByClassName('classname');
+
 =>quirySelector()- its a flexible methode that returns the first element which is match one or more css selectors.
+Example: document.querySelector('.example');
 
 2. How do you create and insert a new element into the DOM?
 
 =>
-<!--in HTML-->
+<!--in HTML
 <div id = "head-section">
-    <p>This is Bangladesh <p>
-</div>
+    <p>This is Bangladesh </p>
+</div>-->
 <script>
     const newText = document.createElement('p');
-    newText.textContent = 'Welcome to the Bangladesh';
-    Const headSection = document.getElementById('head-section');
+    newHeading.textContent = 'Welcome to the Bangladesh';
+    Const headSection = document.getelementById('head-section');
     headSection.appendchild(newText);
 </script>
 
@@ -49,11 +54,25 @@ git clone https://github.com/Rabeaaktersumi/Job-Application-Tracker.git
 it works by clicking a button inside a div, it's occurs an event on target element and event handlers on target element execute first. 
 We can stop event bubbling using by event.stopPRopagation() method.
 
+EXAMPLE:
+document.querySelector('.grandparent').addEventListener('click', function() => {
+  console.log('Grandparent clicked');
+});
+
+document.querySelector('.parent').addEventListener('click', function() => {
+  console.log('Parent clicked');
+});
+
+document.querySelector('.child').addEventListener('click', function() => {
+  console.log('Child clicked');
+});
+
+
 4. What is Event Delegation in JavaScript? Why is it useful?
 
 => Event Delegation is a technique where we use one event listener for different child element instead of different event listener in their common parent element. It works depend on event bibbling.
 
-It's useful because:
+It's useful because-
 -It's performance is very good need less memory and don't need different event listener.
 -Supports dynamic elements.
 -It's make code clean and maintainable.
@@ -66,7 +85,32 @@ It's useful because:
 -It does not stop event bubbling.
 -It uses for stops form submit, link click etc for default browser's behaviour.
 
+Example:
+const text = document.querySelector('.para');
+text.addEventListener('click', function(event){
+    event.preventDefault();
+
+    console.log('text prevented');
+})
+
 stopPropagation() methods:
 -It works to stop event bubbling.
 -It does not stop default event behaviour.
 -Stop event from reaching parent elements.
+
+Example:
+document.querySelector('.grandparent').addEventListener('click', function() => {
+    functionName.stopPropagation()
+    console.log('Grandparent clicked');
+});
+
+document.querySelector('.parent').addEventListener('click', function() => {
+    functionName.stopPropagation()
+    console.log('Parent clicked');
+});
+
+document.querySelector('.child').addEventListener('click', function() => {
+    functionName.stopPropagation()
+    console.log('Child clicked');
+});
+
