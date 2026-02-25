@@ -25,8 +25,8 @@ git clone https://github.com/Rabeaaktersumi/Job-Application-Tracker.git
 =>getElementById()- its select an element using by its unique name (id attribute), returns object or null.
 Example: document.getElementById('id');
 
-=>getElementByClassName()- its select an element using by its common names (class attribute), returns a live HTMLCollection.
-Example: document.getElementByClassName('classname');
+=>getElementsByClassName()- its select an element using by its common names (class attribute), returns a live HTMLCollection.
+Example: document.getElementsByClassName('classname');
 
 =>quirySelector()- its a flexible methode that returns the first element which is match one or more css selectors.
 Example: document.querySelector('.example');
@@ -40,7 +40,7 @@ Example: document.querySelector('.example');
 </div>-->
 <script>
     const newText = document.createElement('p');
-    newHeading.textContent = 'Welcome to the Bangladesh';
+    newText.textContent = 'Welcome to the Bangladesh';
     Const headSection = document.getelementById('head-section');
     headSection.appendchild(newText);
 </script>
